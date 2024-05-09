@@ -20,7 +20,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());        // A body Parser Required to post a data
-app.use(cors(options));
+app.use(cors(corsOptions));
 app.use(cookieSession({name:"session", keys:["Vikram"], MaxAge:24*60*60*1000}))
 app.use(passport.initialize());
 app.use('/', route);
