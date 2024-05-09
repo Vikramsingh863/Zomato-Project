@@ -12,7 +12,7 @@ const passport = require('passport');
 
 const cookieSession = require("cookie-session");
 const corsOptions = {
-    origin: `https://zomato-project-gray.vercel.app:${PORT}`,
+    origin: `https://zomato-project-gray.vercel.app`,
     credentials: true,
     optionSuccessStatus: 200
 }
