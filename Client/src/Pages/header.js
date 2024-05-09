@@ -32,10 +32,10 @@ class Header extends React.Component{
     }
     
     google=()=>{
-        window.open('https://zomato-project-dulo.onrender.com/auth/google","_self')
+        window.open(`https://zomato-project-dulo.onrender.com/auth/google`)
     }
      logout=()=>{
-        window.open('https://zomato-project-dulo.onrender.com/auth/logout","_self')
+        window.open(`https://zomato-project-dulo.onrender.com/auth/logout`)
      }
  
     render(){
