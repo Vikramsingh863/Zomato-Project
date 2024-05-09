@@ -101,7 +101,7 @@ class Details extends React.Component {
             handler: async(response) => {
                 try{
                     
-                    const verifyLink = `${URL}/api/payment/verify`;
+                    const verifyLink = `https://zomato-project-dulo.onrender.com/api/payment/verify`;
                     const {data} = await axios.post(verifyLink, response);
 
                 } catch (error) {
@@ -117,7 +117,7 @@ class Details extends React.Component {
         const { subtotal } = this.state;
 
         try{
-            const orderLink = `${URL}/api/payment/orders`;
+            const orderLink = `https://zomato-project-dulo.onrender.com/api/payment/orders`;
             const { data } = await axios.post(orderLink, { amount: subtotal });
 
             this.initPayment(data.data);
