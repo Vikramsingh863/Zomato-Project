@@ -38,7 +38,7 @@ mongoose.connect(MongoAtlas, {
 })
     .then(res => {
         app.listen(PORT, () => {
-            console.log(`Server is running at ${HOSTNAME}: ${PORT}`)
+            console.log(`Server is running at : ${PORT}`)
         });
     })
     .catch(err => console.log(err));
