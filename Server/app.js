@@ -4,7 +4,7 @@ const cors = require("cors");
 const route = require("./Route/index");
 const dotenv = require('dotenv')
 const PORT = process.env.PORT||5500;
-const HOSTNAME = "localhost";
+
 const paymentRoute= require('./Controller/payment')
 const authRoute = require('./Controller/auth')
 const passportSetup = require('./Controller/passoport')
@@ -37,7 +37,7 @@ mongoose.connect(MongoAtlas, {
     // useUnifiedTopology: true
 })
     .then(res => {
-        app.listen(PORT, HOSTNAME, () => {
+        app.listen(PORT, () => {
             console.log(`Server is running at ${HOSTNAME}: ${PORT}`)
         });
     })
