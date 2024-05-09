@@ -3,7 +3,7 @@ import axios from "axios";
 import queryString from "query-string";
 import navHook from "./nav";
 import '../Style/filterPage.css';
-
+const URL ="https://zomato-project-dulo.onrender.com"
 class Filter extends React.Component{
     constructor(){
         super();
@@ -28,7 +28,7 @@ class Filter extends React.Component{
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
@@ -40,7 +40,7 @@ class Filter extends React.Component{
 
         // Mealtype
         axios({
-            url: `http://localhost:5500/meal/${int}`,
+            url: `${URL}/meal/${int}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/JSON'}
         })
@@ -51,7 +51,7 @@ class Filter extends React.Component{
 
         // GET location API
         axios({
-            url: 'http://localhost:5500/location',
+            url: `${URL}/location`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON'}
         })
@@ -77,7 +77,7 @@ class Filter extends React.Component{
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
@@ -112,7 +112,7 @@ class Filter extends React.Component{
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
@@ -138,7 +138,7 @@ class Filter extends React.Component{
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
@@ -166,7 +166,7 @@ class Filter extends React.Component{
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
@@ -192,7 +192,7 @@ class Filter extends React.Component{
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import navHook from "./nav";
-
+const URL = "https://zomato-project-dulo.onrender.com"
 class Banner extends React.Component{
     constructor(){
         super();
@@ -17,7 +17,7 @@ class Banner extends React.Component{
         //sessionStorage.setState('location', location);
 
         axios({
-            url: `http://localhost:5500/rest/${location}`,
+            url: `${URL}/${location}`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON'}
         })

@@ -13,7 +13,7 @@ const customStyles = {
         transform: 'translate(-50%, -50%)',
     },
 };
-
+const URL = "https://zomato-project-dulo.onrender.com"
 
 class Header extends React.Component{
     constructor(){
@@ -32,10 +32,10 @@ class Header extends React.Component{
     }
     
     google=()=>{
-        window.open("http://localhost:5500/auth/google","_self")
+        window.open(`${URL}/auth/google","_self`)
     }
      logout=()=>{
-        window.open("http://localhost:5500/auth/logout","_self")
+        window.open(`${URL}/auth/logout","_self`)
      }
  
     render(){

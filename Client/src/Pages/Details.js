@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import '../Style/detailPage.css';
-
+const URL = "https://zomato-project-dulo.onrender.com"
 const customStyles = {
     overlay: {
         backgroundColor: "rgba(0,0,0,0.8)"
@@ -39,7 +39,7 @@ class Details extends React.Component {
         //console.log(restuarant);
 
         axios({
-            url: `http://localhost:5500/restaurants/${restuarant}`,
+            url: `${URL}/restaurants/${restuarant}`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -55,7 +55,7 @@ class Details extends React.Component {
 
         if (state == "menuModal" && value == true) {
             axios({
-                url: `http://localhost:5500/menu/${resId}`,
+                url: `${URL}/menu/${resId}`,
                 method: 'get',
                 headers: { 'Content-Type': 'application/JSON' }
             })
@@ -101,7 +101,7 @@ class Details extends React.Component {
             handler: async(response) => {
                 try{
                     
-                    const verifyLink = `http://localhost:5500/api/payment/verify`;
+                    const verifyLink = `${URL}/api/payment/verify`;
                     const {data} = await axios.post(verifyLink, response);
 
                 } catch (error) {
@@ -117,7 +117,7 @@ class Details extends React.Component {
         const { subtotal } = this.state;
 
         try{
-            const orderLink = `http://localhost:5500/api/payment/orders`;
+            const orderLink = `${URL}/api/payment/orders`;
             const { data } = await axios.post(orderLink, { amount: subtotal });
 
             this.initPayment(data.data);

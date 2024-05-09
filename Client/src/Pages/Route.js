@@ -6,12 +6,12 @@ import Details from './Details';
 import Header from './header';
 import { useState } from 'react';
 const Router = () => {
-
+const URL = "https://zomato-project-dulo.onrender.com"
     const [user, setUser] = useState(null)
 
 useEffect(() => {
     const getUser = () => {
-        fetch(`http://localhost:5500/auth/login/success`, {
+        fetch(`${URL}/auth/login/success`, {
             method: "GET",
             credentials: "include",
             headers: {

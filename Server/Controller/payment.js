@@ -55,9 +55,9 @@ router.post("/orders", async (req, res) => {
         });
 
         const options = {
-            amount: req.body.amount * 100,     // Rs 100 => 100 paisa * 100   => Rs. 100.00
+            amount: req.body.amount * 100,     
             currency: "INR",
-            // reciept: crypto.randomBytes(10).toString("hex"),
+            reciept: crypto.randomBytes(10).toString("hex"),
         };
 
         instance.orders.create(options, (error, orders) => {

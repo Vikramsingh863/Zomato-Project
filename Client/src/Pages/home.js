@@ -3,7 +3,7 @@ import '../Style/frontPage.css';    // importing the CSS
 import Banner from './Banner';
 import QuickSearch from "./QuickSearch";
 import axios from "axios";
-
+const URL ="https://zomato-project-dulo.onrender.com"
 class Homepage extends React.Component{
     constructor(){
         super();
@@ -16,7 +16,7 @@ class Homepage extends React.Component{
     componentDidMount(){
         // location API
         axios({
-            url: 'http://localhost:5500/location',
+            url: `${URL}/location`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON'}
         })
@@ -27,7 +27,7 @@ class Homepage extends React.Component{
 
         // Mealtype API
         axios({
-            url: 'http://localhost:5500/mealtype',
+            url: `${URL}/mealtype`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON'}
         })
