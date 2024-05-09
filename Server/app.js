@@ -11,16 +11,16 @@ const passportSetup = require('./Controller/passoport')
 const passport = require('passport');
 
 const cookieSession = require("cookie-session");
-// const corsOptions = {
-//     origin: 'http://localhost:3000',
-//     credentials: true,
-//     optionSuccessStatus: 200
-// }
+const corsOptions = {
+    origin: 'https://zomato-project-gray.vercel.app/',
+    credentials: true,
+    optionSuccessStatus: 200
+}
 dotenv.config();
 
 const app = express();
 app.use(express.json());        // A body Parser Required to post a data
-app.use(cors());
+app.use(cors(options));
 app.use(cookieSession({name:"session", keys:["Vikram"], MaxAge:24*60*60*1000}))
 app.use(passport.initialize());
 app.use('/', route);
